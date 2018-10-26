@@ -96,7 +96,7 @@
    <li><%= link_to "Runners", runners_avatar_path %></li>
    <% if runner_signed_in? %>
 
-    <li class='has-sub' style="float: right; margin-right: 100px;  cursor: pointer;"><a><span><%= current_runner.name%></span></a>
+    <li class='has-sub' style="float: right; margin-right: 100px;  cursor: pointer;"><a><span><%= current_runner.email%></span></a>
       <ul  style="max-width: 80px; ">
         <li><%= link_to "Home", runner_home_path %></li>
         <li><%= link_to 'Editar', edit_runner_registration_path, :class => 'navbar-link' %></li>

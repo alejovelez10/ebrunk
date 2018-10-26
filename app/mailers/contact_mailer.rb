@@ -21,6 +21,6 @@ class ContactMailer < ApplicationMailer
     @contact = contact
     @property = Property.find(contact.property_id)
     @runner = Runner.find(@property.runner_id)
-    mail(to: @contact.email, subject: "El runner acepto la video llamada el #{get_date_hora(@contact.datetime_call)}")
+    mail(to: @contact.email, subject: "El runner acepto la video llamada ")
   end
 end

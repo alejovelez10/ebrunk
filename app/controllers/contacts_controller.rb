@@ -55,7 +55,7 @@ class ContactsController < ApplicationController
     end
              
                                                      
-      ContactMailer.call_acepted(@contact).deliver
+      ContactMailer.call_acepted(contact).deliver
        
   	
   end
