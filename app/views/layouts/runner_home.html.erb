@@ -185,6 +185,11 @@
                             <i class="fas fa-home" id="icon_menu"></i><b> Home</b>
                         <% end -%>
                     </li>
+                    <li>
+                        <%= link_to  new_property_path do %>
+                            <i class="fas fa-building" id="icon_menu"></i><b> Nueva Propiedad</b>
+                        <% end -%>
+                    </li>
 
                     <li class="active">
                         <%= link_to  runner_home_path do %>
@@ -197,29 +202,21 @@
                             <i class="fas fa-exchange-alt" id="icon_menu"></i><b> Propiedades para Intercambio</b>
                         <% end -%>
                     </li>
-
-                    <li>
-                        <%= link_to  properties_path do %>
-                            <i class="fas fa-building" id="icon_menu"></i><b> Propiedades</b>
+                     <li>
+                        <%= link_to  index_contacs_path do %>
+                            <i class="fas fa-headset" id="icon_menu"></i><b>Solicitud Video llamada</b>
                         <% end -%>
-                    </li>
+                    </li>    
+                 
 
-                    <li>
-                        <%= link_to  new_property_path do %>
-                            <i class="fas fa-building" id="icon_menu"></i><b> Nueva Propiedad</b>
-                        <% end -%>
-                    </li>
+                    
                     <li>
                         <%= link_to  my_brunks_path do %>
                             <i class="fas fa-user" id="icon_menu"></i><b>Brunk Solicitados</b>
                         <% end -%>
                     </li>
 
-                    <li>
-                        <%= link_to  index_contacs_path do %>
-                            <i class="fas fa-headset" id="icon_menu"></i><b>Solicitud Video llamada</b>
-                        <% end -%>
-                    </li>
+                   
                        <li>
                         <%= link_to  brunks_required_path do %>
                             <i class="fas fa-users" id="icon_menu"></i><b>Solicitudes de Brunk</b>
