@@ -31,17 +31,17 @@
     		<div class="row">
     		
     			<div class="col-md-12" style="font-size: 30px; text-align: center">
-    					 <%if (@property1.prince - @property.prince) > 0 %>
+    					 <%if (@property1.price - @property.price) > 0 %>
                     
                                  
                                
                                    <small><b>Debes dar</b></small>
-                                    <small><%= number_to_currency((@property1.prince - @property.prince ), precision: 0) %></small>
+                                    <small><%= number_to_currency((@property1.price - @property.price ), precision: 0) %></small>
                                   
                                   <%else%>
                        
                                   		<small><b>Te deben dar</b></small>
-                                    <small><%= number_to_currency(( @property.prince - @property1.prince), precision: 0) %></small>
+                                    <small><%= number_to_currency(( @property.price - @property1.price), precision: 0) %></small>
                            
                                   <%end%>
 

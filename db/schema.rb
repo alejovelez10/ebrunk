@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_24_213101) do
+ActiveRecord::Schema.define(version: 2018_10_26_052233) do
 
   create_table "brunk_tracings", force: :cascade do |t|
     t.integer "brunk_id"
@@ -60,34 +60,8 @@ ActiveRecord::Schema.define(version: 2018_10_24_213101) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "properties", force: :cascade do |t|
-    t.string "type_of_offer"
-    t.string "property_type"
-    t.integer "runner_id"
-    t.integer "country_id"
-    t.string "department"
-    t.string "city"
-    t.string "address"
-    t.integer "latitude"
-    t.integer "length"
-    t.integer "prince"
-    t.integer "stratum"
-    t.integer "area"
-    t.string "blueprints"
-    t.integer "number_bedrooms"
-    t.integer "number_bathrooms"
-    t.integer "levels"
-    t.string "state"
-    t.boolean "state_favorite"
-    t.string "url_video"
-    t.string "images"
-    t.string "title"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "parking_lot"
-    t.boolean "brunk"
-    t.string "brunk_type"
-  end
+# Could not dump table "properties" because of following StandardError
+#   Unknown type 'long' for column 'price'
 
   create_table "property_images", force: :cascade do |t|
     t.string "file"

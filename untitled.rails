@@ -43,7 +43,7 @@ v class="row" style="background: #fff; border-radius: 4px;">
 
                                    <div class="col-md-3" style="    padding-right: 27px;float: right; font-size: 25px;">
                                     <small><b>Precio</b></small><br>
-                                    <small><%= number_to_currency(@property.prince, precision: 0) %></small>
+                                    <small><%= number_to_currency(@property.price, precision: 0) %></small>
                                   </div>
                             </div>
                           </div>
@@ -100,18 +100,18 @@ v class="row" style="background: #fff; border-radius: 4px;">
 
                                   <div class="col-md-3" style="    padding-right: 27px; font-size: 25px;">
                                      <small><b>Precio</b></small><br>
-                                    <small><%= number_to_currency(property.prince, precision: 0) %></small>
+                                    <small><%= number_to_currency(property.price, precision: 0) %></small>
                                   </div>
-                                   <%if (property.prince - @property.prince) > 0 %>
+                                   <%if (property.price - @property.price) > 0 %>
                                   <div class="col-md-3 text-right" style="    padding-right: 27px;float: right; font-size: 25px;color: red;">
                                  
                                 
                                    <small><b>Debes dar</b></small><br>
-                                    <small><%= number_to_currency((property.prince - @property.prince ), precision: 0) %></small>
+                                    <small><%= number_to_currency((property.price - @property.price ), precision: 0) %></small>
                                   <%else%>
                                   <div class="col-md-3 text-right" style="    padding-right: 27px;float: right; font-size: 25px;color: green;">
                                       <small><b>Te deben dar</b></small><br>
-                                    <small><%= number_to_currency(( @property.prince - property.prince), precision: 0) %></small>
+                                    <small><%= number_to_currency(( @property.price - property.price), precision: 0) %></small>
                                   <%end%>
                                     
                                   </div>

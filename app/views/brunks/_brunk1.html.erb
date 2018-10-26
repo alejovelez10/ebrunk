@@ -35,10 +35,10 @@
     </div>
 
     <div class="col-md-6 col-md-offset-3">
-         <%if (@property1.prince - @property.prince) > 0 %>
+         <%if (@property1.price - @property.price) > 0 %>
                               <div class="alert alert-danger">
                                    <small><b>Debes dar</b></small>
-                                    <small><%= number_to_currency((@property1.prince - @property.prince ), precision: 0) %></small>
+                                    <small><%= number_to_currency((@property1.price - @property.price ), precision: 0) %></small>
                                     
                               </div>    
                                
@@ -47,7 +47,7 @@
                                   <%else%>
                         <div class="alert alert-success">
                                       <small><b>Te deben dar</b></small>
-                                    <small><%= number_to_currency(( @property.prince - @property1.prince), precision: 0) %></small> 
+                                    <small><%= number_to_currency(( @property.price - @property1.price), precision: 0) %></small> 
                            </div> 
         <%end%>
 
