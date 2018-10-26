@@ -167,7 +167,7 @@
             <div class="user-info">
                 <div class="image">
                     
-                    <%= current_runner.image? ? image_tag(current_runner.image_url(:medium)) : image_tag("https://dnuba.s3.amazonaws.com/uploads/bank_image/achivo/44/user.jpeg", style: "height: 104px;")%>
+                    <%= current_runner.image? ? image_tag(current_runner.image_url(:medium)) : image_tag("https://dnuba.s3.amazonaws.com/uploads/bank_image/achivo/44/user.jpeg", style: "width:85px;height:80px")%>
                 </div>
                 <div class="info-container">
                     <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%= current_runner.name%></div>
