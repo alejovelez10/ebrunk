@@ -87,7 +87,7 @@
 
                             </div>
                             <div role="tabpanel" class="tab-pane fade" id="Section2">
-                                  <iframe  width="530" height="450" src="https://my.matterport.com/show/?model=g8ioLttQigi" allowfullscreen allow="vr"></iframe>
+                                  <iframe  width="530" height="450" src="<%=@property.url_video%>" allowfullscreen allow="vr"></iframe>
                             </div>
                         </div>
                     </div>
@@ -145,7 +145,7 @@
     <div class="w3-col m2">
       <div class="w3-card w3-round w3-white w3-center" id="form-send">
         <div class="w3-container" style="padding: 0px; ">
-          <h2>Mensage</h2><br>
+          <h2>Contactar Runner</h2><br>
 
          <%= form_tag new_contact_path , remote: true,method: :post do %>
 
