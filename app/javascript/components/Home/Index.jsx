@@ -97,7 +97,7 @@ class Index extends Component {
                     */}
 
 
-                    <section id="features" className="features">
+                    <section id="features" className="features pb-0">
                         <div className="container" data-aos="fade-up">
                             <div className="tab-content">
 
