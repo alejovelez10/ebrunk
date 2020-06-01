@@ -12,7 +12,7 @@
 
                                <div class="col-md-12">
                                 <p style="margin-left: 5px;margin-bottom: 10px;" > <strong><%= property.property_type%> - <%= property.city%> - <%=property.country.name if property.country%></strong>
-                                  <%= link_to 'View Property', property, class: "btn2", style: "float:right"%>
+                                  <%= link_to 'View Property', property, class: "btn2", style: "float:right", data: {turbolinks: false} %>
                                 </p>
                                 <small><strong> Area: </strong><%= property.area%>,00 m2</small>
                                 <small><strong> Rooms: </strong><%= property.number_bedrooms%> hab</small>
