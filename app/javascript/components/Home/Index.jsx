@@ -299,7 +299,7 @@ class Index extends Component {
 
                             </div>
 
-                            <div className="col-lg-4 col-md-6 footer-newsletter">
+                            {/*<div className="col-lg-4 col-md-6 footer-newsletter">
                                 <h4>Page traslation</h4>
                                 <div className="row">
                                     <div className="col-md-4">
@@ -310,7 +310,7 @@ class Index extends Component {
                                         <img src="https://image.flaticon.com/icons/png/512/555/555635.png" className="img-fluid" alt=""/>
                                     </div>
                                 </div>
-                            </div>
+                            </div>*/}
 
                             </div>
                         </div>
