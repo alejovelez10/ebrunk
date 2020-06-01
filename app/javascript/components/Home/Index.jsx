@@ -5,43 +5,42 @@ class Index extends Component {
         return (
             <React.Fragment>
                 <section id="hero">
-                    <div class="hero-container" data-aos="fade-up" data-aos-delay="150">
+                    <div className="hero-container" data-aos="fade-up" data-aos-delay="150">
                         <h1>WORLDWIDE NETWORKING</h1>
-                        <div class="d-flex">
-                            <div class="s002">
+                        <div className="d-flex">
+                            <div className="s002">
                             <form>
-                                
-                                <div class="inner-form">
-                                <div class="input-field first-wrap">
-                                    <div class="icon-wrap">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path>
-                                    </svg>
+                                <div className="inner-form">
+                                    <div className="input-field first-wrap">
+                                        <div className="icon-wrap">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path>
+                                            </svg>
+                                        </div>
+                                        <input id="search" type="text" placeholder="What are you looking for?" />
                                     </div>
-                                    <input id="search" type="text" placeholder="What are you looking for?" />
-                                </div>
 
-                                <div class="input-field second-wrap">
-                                    <div class="icon-wrap">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                        <path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"></path>
-                                    </svg>
+                                    <div className="input-field second-wrap">
+                                        <div className="icon-wrap">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"></path>
+                                            </svg>
+                                        </div>
+                                        <input className="datepicker" id="depart" type="text" placeholder="29 Aug 2018" />
                                     </div>
-                                    <input class="datepicker" id="depart" type="text" placeholder="29 Aug 2018" />
-                                </div>
 
-                                <div class="input-field third-wrap">
-                                    <div class="icon-wrap">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                        <path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"></path>
-                                    </svg>
+                                    <div className="input-field third-wrap">
+                                        <div className="icon-wrap">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"></path>
+                                            </svg>
+                                        </div>
+                                        <input className="datepicker" id="return" type="text" placeholder="30 Aug 2018" />
                                     </div>
-                                    <input class="datepicker" id="return" type="text" placeholder="30 Aug 2018" />
-                                </div>
 
-                                <div class="input-field fifth-wrap">
-                                    <button class="btn-search" type="button">SEARCH</button>
-                                </div>
+                                    <div className="input-field fifth-wrap">
+                                        <button className="btn-search" type="button">SEARCH</button>
+                                    </div>
                                 </div>
                             </form>
                             </div>
@@ -126,6 +125,43 @@ class Index extends Component {
                             </div>
                         </div>
                     </section>
+
+                    <section id="features" className="features">
+                        <div className="container" data-aos="fade-up">
+                            <div className="tab-content">
+
+                                <div className="tab-pane active show" id="tab-1">
+                                    <div className="row">
+
+                                        <div className="col-lg-6 order-2 order-lg-1 text-center">
+                                            <img 
+                                            src="https://trello-attachments.s3.amazonaws.com/5ed1bddd6e1f10827a37d66d/900x443/2bf85717b1b25a9e5f1184743f45581c/Blockchain-Technology.jpg" 
+                                            alt="" 
+                                            className="img-fluid mt-3"
+                                            style={{height: '282px'}}
+                                            />
+                                        </div>
+
+                                        <div className="col-lg-6 order-1 order-lg-2 mt-3 mt-lg-0">
+                                            <h3 className="mb-3">SMART AGREEMENTS</h3>
+                                            <hr/>
+                                            <p className="font-italic mb-4">
+                                                Runners are those participants in the company who have the possibility of earning money through RUN (sales) made by assemblies made on the platform.
+                                            </p >
+
+                                            <h3 className="mb-3">BLOCKCHAIN</h3>
+                                            <hr/>
+                                            <p>
+                                                Now days blockchain is changing the world , because is the technology of No Corruption by the system that many different servers verify every transaction.
+                                                We work with blockchain technology for make deals with touch id, face id , and online signature in this way we can trust and secure every deal
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 
 
                     <section id="services" className="services section-bg">
@@ -150,7 +186,7 @@ class Index extends Component {
                                             </p>
                                         </div>
                                         <div className="col-lg-6 order-1 order-lg-2 text-center">
-                                            <iframe width="580" height="400" src="https://my.matterport.com/show/?model=g8ioLttQigi" allowfullscreen allow="vr"></iframe>
+                                            <iframe width="580" height="400" src="https://my.matterport.com/show/?model=g8ioLttQigi" allowFullScreen allow="vr"></iframe>
                                         </div>
                                     </div>
                                 </div>
