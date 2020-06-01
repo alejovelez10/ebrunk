@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.4.0'
+ruby '2.5.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
@@ -14,7 +14,8 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
-
+gem 'webpacker'
+gem "webpacker-react", "~> 0.3.2"
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -34,9 +35,10 @@ gem 'annotate'
 gem 'will_paginate-bootstrap'
 gem 'will_paginate'
 gem "mini_magick"
-gem 'bootstrap-sass', '~> 3.3.7'
+#gem 'bootstrap-sass', '~> 3.3.7'
 gem "nested_form", :git => 'https://github.com/ryanb/nested_form.git'
 gem 'toastr_rails'
+gem 'bootstrap', '~> 4.3.1'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 gem 'fog', '~> 1.38'
@@ -48,6 +50,7 @@ gem 'google_calendar', '~> 0.6.2'
 gem 'omniauth-google-oauth2'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
+gem 'active_model_serializers', '~> 0.10.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

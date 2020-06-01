@@ -1,7 +1,60 @@
-<!-- LOGIN MODULE -->
+<% if notice.present? %>
+    <div class="container" style="margin-bottom: 50px">
+        <div class="col-md-12" style="padding: 0;">
+            <div id="notice" class="alert alert-warning alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <%= notice %>
+                </div>      
+            </div>
+        </div>
+    </div>
+<% end%>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="text-center">
+                <img 
+                    src="https://dnuba.s3.amazonaws.com/uploads/bank_image/achivo/59/WhatsApp_Image_2018-10-25_at_1.53.16_PM.jpeg" 
+                    alt=""
+                    class="img-fluid mt-4"
+                >
+            </div>
+            <div class="card login-box">
+                <div class="card-body">
+                    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+
+                    <div class="form-group">
+                        <label class="control-label">Email</label>
+                        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", :placeholder => "Email" %>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label">Password</label>
+                        <%= f.password_field :password, autocomplete: "current-password", class: "form-control", :placeholder => "Password" %>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label">Confirmation Password</label>
+                        <%= f.password_field :password_confirmation, autocomplete: "new-password", id: "user_pass", class: "form form-control", placeholder: "Confirmation Password" %>
+                    </div>
+
+
+                    <div class="form-group btn-container mt-5">
+                        <%= f.submit "Ingresar", class: "btn btn-secondary btn-block btn-submit" %>
+                    </div>
+
+                    <% end %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 
         <div class="login">
             <div class="wrap">
-                <!-- TOGGLE -->
+
                 <div id="toggle-wrap">
                     <div id="toggle-terms">
                         <div id="cross">
@@ -10,53 +63,40 @@
                         </div>
                     </div>
                 </div>
-                <!-- TERMS -->
+
                 <div class="terms">
-                   <%= render "terminos"%>
+                   <%# render "terminos"%>
                 </div>
 
-                <!-- SLIDER -->
+
                 <div class="content">
-                    <!-- SLIDESHOW -->
+
                     <div id="slideshow">
                         <div class="one">
-                            <!--<h2><span>EVENTS</span></h2>
-                            <p>Sign up to attend any of hundreds of events nationwide</p>
-                            --> 
+
                         </div>
                         <div class="two">
-                            <!--<h2><span>LEARNING</span></h2>
-                            <p>Thousands of instant online classes/tutorials included</p>
-                            -->
+
                         </div>
                         <div class="three">
-                            <!--<h2><span>GROUPS</span></h2>
-                            <p>Create your own groups and connect with others that share your interests</p>
-                            -->
+
                         </div>
                         <div class="four">
-                            <!--<h2><span>SHARING</span></h2>
-                            <p>Share your works and knowledge with the community on the public showcase section</p>
-                            -->
+
                         </div>
                     </div>
 
                 </div>
-                <!-- LOGIN FORM -->
+
                 <div class="user">
-                    <!-- ACTIONS
-                    <div class="actions">
-                        <a class="help" href="#signup-tab-content">Sign Up</a><a class="faq" href="#login-tab-content">Login</a>
-                    </div>
-                    -->
+
                     <div class="form-wrap">
-                        <!-- TABS -->
                      
                             <h3 class="login-tab"><a class="log-in active" href="#login-tab-content"><span>Registro<span></a></h3>
                         
-                        <!-- TABS CONTENT -->
+
                       <div class="tabs-content">
-                            <!-- TABS CONTENT LOGIN -->
+
                         <div id="login-tab-content" class="active">
 
                           <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -72,7 +112,6 @@
                                   <% end %>
                                     <%= f.password_field :password, autocomplete: "new-password", id: "user_login", class: "input" %>
 
-                                   <!-- <%= f.hidden_field :name, :value =>  "Usuario" %>-->
                                 
                                 <p id="login_names">Confirmar Contraseña</p>
                                  <%= f.password_field :password_confirmation, autocomplete: "new-password", id: "user_pass", class: "input" %>
@@ -82,7 +121,7 @@
                           <% end %>
 
                           <div class="help-action">
-                            <p align="center"><%= render "devise/shared/links" %>
+                            <p align="center"><%# render "devise/shared/links" %>
                             <i class="fa fa-arrow-left" aria-hidden="true"></i><a class="agree" href="#">Terminos Y Condicines</a><br><br>
 
                             <a href="/" class="btn1">Pagina Proncipal</a>
@@ -95,3 +134,4 @@
                 </div>
             </div>
         </div>
+-->

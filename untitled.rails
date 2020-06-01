@@ -152,7 +152,15 @@ v class="row" style="background: #fff; border-radius: 4px;">
 
 
 
+before_action :redirect_if_old
 
+  protected
+
+  def redirect_if_old
+    if request.host == 'old.com'
+      redirect_to "#{request.protocol}new.com#{request.fullpath}", :status => :moved_permanently 
+    end
+  end
 
 
 

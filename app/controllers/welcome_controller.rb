@@ -4,7 +4,6 @@ class WelcomeController < ApplicationController
 
 	def index
 
-
 	end	
 
 	def runners_avatar
@@ -13,7 +12,6 @@ class WelcomeController < ApplicationController
 		else
 			@runner = Runner.all.paginate(:page => params[:page], :per_page => 4)
 		end
-		
 	end
 
 	def runner_home

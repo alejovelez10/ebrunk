@@ -1,0 +1,233 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require sweetalert2
+ *= require_tree .
+ *= require_self
+ *= require toastr_rails
+ */
+/*--------------------------- MENU -------------------------------------------------------------*/
+
+@import "bootstrap";
+@import "platilla";
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+
+/*--------------------------- MENU -------------------------------------------------------------*/
+
+
+.flickity-prev-next-button.previous{
+    display: none;
+}
+
+.flickity-prev-next-button.next{
+    display: none;
+}
+
+
+#buscador{
+    margin-bottom: 5px;
+    background: #dddddd;
+    padding: 20px 20px;
+
+}
+
+.color-show{
+  background: #113a5b !important;
+  padding: 12px 0 !important;
+}
+
+
+.btn1{
+    padding: 10px 10px;
+    background: #0e67c3;
+    color: #fff;
+    border-radius: 12px;
+    border-color: #0e67c3;
+    border: none;
+}
+
+.btn1:hover{
+   background-color: #0e67c3;
+}
+
+.btn2{
+    background: #0e67c3;
+    color: #fff;
+    border-color: #0e67c3;
+    border: none;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.btn2:hover{
+   color: #fff;
+   text-decoration: none;
+}
+
+
+
+
+.pagination{
+    margin-left: 279px !important;
+}
+
+.pagination>.active>span{
+    background: #d8622b !important;
+    border-color: #d8622b !important;
+}
+
+.pagination>li>a{
+    color: black !important;
+}
+
+
+
+/*===================================================================================*/
+.funkyradio input[type="radio"]:empty,
+  .funkyradio input[type="checkbox"]:empty {
+    display: none;
+  }
+
+  .funkyradio input[type="radio"]:empty ~ label,
+  .funkyradio input[type="checkbox"]:empty ~ label {
+    position: relative;
+    line-height: 2.5em;
+    text-indent: 3.25em;
+    margin-top: 2em;
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+
+  .funkyradio input[type="radio"]:empty ~ label:before,
+  .funkyradio input[type="checkbox"]:empty ~ label:before {
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 2.5em;
+    background: #D1D3D4;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .funkyradio input[type="radio"]:hover:not(:checked) ~ label,
+  .funkyradio input[type="checkbox"]:hover:not(:checked) ~ label {
+    color: #888;
+  }
+
+  .funkyradio input[type="radio"]:hover:not(:checked) ~ label:before,
+  .funkyradio input[type="checkbox"]:hover:not(:checked) ~ label:before {
+    content: '\2714';
+    text-indent: .9em;
+    color: #C2C2C2;
+  }
+
+  .funkyradio input[type="radio"]:checked ~ label,
+  .funkyradio input[type="checkbox"]:checked ~ label {
+    color: #777;
+  }
+
+  .funkyradio input[type="radio"]:checked ~ label:before,
+  .funkyradio input[type="checkbox"]:checked ~ label:before {
+    content: '\2714';
+    text-indent: .9em;
+    color: #333;
+    background-color: #ccc;
+  }
+
+  .funkyradio input[type="radio"]:focus ~ label:before,
+  .funkyradio input[type="checkbox"]:focus ~ label:before {
+    box-shadow: 0 0 0 3px #999;
+  }
+
+  .funkyradio-default input[type="radio"]:checked ~ label:before,
+  .funkyradio-default input[type="checkbox"]:checked ~ label:before {
+    color: #333;
+    background-color: #ccc;
+  }
+
+  .funkyradio-primary input[type="radio"]:checked ~ label:before,
+  .funkyradio-primary input[type="checkbox"]:checked ~ label:before {
+    color: #fff;
+    background-color: #337ab7;
+  }
+
+  .funkyradio-success input[type="radio"]:checked ~ label:before,
+  .funkyradio-success input[type="checkbox"]:checked ~ label:before {
+    color: #fff;
+    background-color: #5cb85c;
+  }
+
+  .funkyradio-danger input[type="radio"]:checked ~ label:before,
+  .funkyradio-danger input[type="checkbox"]:checked ~ label:before {
+    color: #fff;
+    background-color: #d9534f;
+  }
+
+  .funkyradio-warning input[type="radio"]:checked ~ label:before,
+  .funkyradio-warning input[type="checkbox"]:checked ~ label:before {
+    color: #fff;
+    background-color: #f0ad4e;
+  }
+
+  .funkyradio-info input[type="radio"]:checked ~ label:before,
+  .funkyradio-info input[type="checkbox"]:checked ~ label:before {
+    color: #fff;
+    background-color: #5bc0de;
+  }
+
+  .funkyradio div {
+      clear: none;
+
+  }
+  /*=================================f==================================================*/
+
+
+.carousel {
+  background: #EEE;
+}
+
+.carousel img {
+  display: block;
+  height: 306px;
+}
+
+@media screen and ( min-width: 768px ) {
+  .carousel img {
+    height: 306px;
+  }
+}
+
+.panel-body{
+    padding: 30px !important;
+}
+
+.panel-body ul{
+    list-style-type: none;
+}
+
+#form-send{
+    width: 200%;
+    padding: 30px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+}
+
+
+.w3-container label{
+    float: left;
+}

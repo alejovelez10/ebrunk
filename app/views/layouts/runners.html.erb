@@ -29,7 +29,7 @@
     <!---------------------------- carousel ---------------------------------->
 
 
-    <%= stylesheet_link_tag    'https://unpkg.com/flickity@2/dist/flickity.min.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag    'https://unpkg.com/flickity@2/dist/flickity.min.css', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'https://code.jquery.com/jquery-1.11.3.min.js', 'data-turbolinks-track': 'reload' %>
     
@@ -37,90 +37,64 @@
 
     
   </head>
-<!--
-  <div class="navbar-wrapper">
-    <div class="container-fluid">
-        <nav class="navbar navbar-fixed-top">
-            <div class="container" style="margin-right: 0px !important;">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#" style="position: relative; left: -57px;">Logo</a>
-                </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><%= link_to "Home", root_path %></li>
-                        <li><%= link_to "Publicaciones",properties_path  %></li>
-                    <% if runner_signed_in? %>
-                        <li><%= link_to "Crear Nueva Propiedad", properties_path  %></li>
-                    <% end -%>
-                    </ul> 
 
+  <header id="header" class="fixed-top <%= controller_name == "welcome" && action_name == "index"  ? "" : "color-show" %>">
 
-                    <ul class="nav navbar-nav pull-right">
-                      <% if runner_signed_in? %>
-                        <li class=" dropdown"><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cuenta<span class="caret"></span></a>
-                            <ul class="dropdown-menu" style="    min-width: 111px;">
-                                <li> <%= link_to 'Editar Perfil', edit_runner_registration_path, :class => 'navbar-link' %></li>
-                                <li><%= link_to "Salir", destroy_runner_session_path, method: :delete, :class => 'navbar-link'  %></li>
-                            </ul>
-                            <% else %>
-                        <li class=" dropdown"><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Registrate<span class="caret"></span></a>
-                            <ul class="dropdown-menu" style="    min-width: 111px;">
-                                <li> <%= link_to "Registrate", new_runner_registration_path, :class => 'navbar-link'  %></li>
-                                <li><%= link_to "Ingresar", new_runner_session_path, :class => 'navbar-link'  %></li>
-                            </ul>
-                          <% end -%>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+
+      <h1 class="logo">
+        <a href="index.html">
+          <img src="https://dnuba.s3.amazonaws.com/uploads/bank_image/achivo/59/WhatsApp_Image_2018-10-25_at_1.53.16_PM.jpeg" alt="">
+        </a>
+      </h1>
+
+      <nav class="nav-menu d-none d-lg-block mr-auto ml-3">
+        <ul>
+          <li class="active"><%= link_to "Home", root_path, data: {turbolinks: false}  %></li>
+          <li><%= link_to "Properties", properties_path, data: {turbolinks: false}  %></li>
+          <li><%= link_to "Runners", runners_avatar_path, data: {turbolinks: false}  %></li>
+
+          <!--
+            <li class="drop-down"><a href="">Drop Down</a>
+              <ul>
+                <li><a href="#">Drop Down 1</a></li>
+                <li class="drop-down"><a href="#">Deep Drop Down</a>
+                  <ul>
+                    <li><a href="#">Deep Drop Down 1</a></li>
+                    <li><a href="#">Deep Drop Down 2</a></li>
+                    <li><a href="#">Deep Drop Down 3</a></li>
+                    <li><a href="#">Deep Drop Down 4</a></li>
+                    <li><a href="#">Deep Drop Down 5</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Drop Down 2</a></li>
+                <li><a href="#">Drop Down 3</a></li>
+                <li><a href="#">Drop Down 4</a></li>
+              </ul>
+            </li>
+          -->
+          <!--
+          <li><a href="#contact">Contact</a></li>
+          -->
+
+        </ul>
+      </nav>
+
+      <% if runner_signed_in? %>
+        <%= link_to 'Edit profile', edit_runner_registration_path, :class => 'get-started-btn scrollto', data: {turbolinks: false} %>
+        <%= link_to "Leave", destroy_runner_session_path, method: :delete, :class => 'get-started-btn scrollto', data: {turbolinks: false}   %>
+      <% else %>
+        <%= link_to "Sign in", new_runner_registration_path, :class => 'get-started-btn scrollto'  %>
+        <%= link_to "Login", new_runner_session_path, :class => 'get-started-btn scrollto'  %>
+      <% end -%>
+
     </div>
-</div>
--->
-
-  <a><img src="https://dnuba.s3.amazonaws.com/uploads/bank_image/achivo/59/WhatsApp_Image_2018-10-25_at_1.53.16_PM.jpeg" style="border-radius: 50%; width: 180px !important; margin-bottom: 10px; margin-top: 10px; height: 80px !important;position: absolute;
-     z-index: 10;"></a>
-
-
-<div id='cssmenu'>
-<ul>
-
-   <li><%= link_to "Home", root_path %></li>
-   <li><%= link_to "Propiedades", properties_path %></li>
-   <li><%= link_to "Runners", runners_avatar_path %></li>
-   <% if runner_signed_in? %>
-
-    <li class='has-sub' style="float: right; margin-right: 100px;  cursor: pointer;"><a><span><%= current_runner.email%></span></a>
-      <ul  style="max-width: 80px; ">
-        <li><%= link_to "Home", runner_home_path %></li>
-        <li><%= link_to 'Editar', edit_runner_registration_path, :class => 'navbar-link' %></li>
-        <li class='last'><%= link_to "Salir", destroy_runner_session_path, method: :delete, :class => 'navbar-link'  %></li>
-      </ul>
-    </li>
-
-   <% else %>
-
-
-    <li class='has-sub' style="float: right; margin-right: 100px;"><a href='#'><span>Ingresar</span></a>
-      <ul>
-        <li><%= link_to "Registrate", new_runner_registration_path, :class => 'navbar-link'  %></li>
-        <li class='last'><%= link_to "Ingresar", new_runner_session_path, :class => 'navbar-link'  %></li>
-      </ul>
-    </li>
-
-   <% end -%>
-
-</ul>
-</div>
-<br>
+  </header>
 
   <body>
-    <%= yield %>
+    <div>
+      <%= yield %>
+    </div>
+    <div id="preloader"></div>
   </body>
 </html>
