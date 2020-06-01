@@ -104,7 +104,8 @@ class Index extends Component {
                                 <div className="tab-pane active show" id="tab-1">
                                     <div className="row">
                                         <div className="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                                            <h3 className="mb-3">¿What is a Runner?</h3>
+                                            <h3 className="mb-3">WHAT IS A RUNNER?</h3>
+                                            <hr/>
                                             <p className="font-italic">
                                                 Runners are those participants in the company who have the possibility of earning money through RUN (sales) made by assemblies made on the platform.
                                             </p>
