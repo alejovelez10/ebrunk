@@ -12,29 +12,29 @@
                   <div class="card">
                       <div class="card-body">
                         <%= form_tag properties_path, :method => 'get' do%>
-                          <strong><p>Filtros</p></strong>
+                          <strong><p>Filters</p></strong>
                           <ul class="list-unstyled">
 
                             <li>
-                              <%= select_tag 'search5', options_for_select(["1", "2", "3", "4","5", "6", "7", "8","9", "10"]),{:class => 'form form-control select' , :prompt => 'Numero de Baños'}%>                              
+                              <%= select_tag 'search5', options_for_select(["1", "2", "3", "4","5", "6", "7", "8","9", "10"]),{:class => 'form form-control select' , :prompt => 'Number of bathrooms'}%>                              
                             </li>
                             <br>
 
                             <li>
-                               <%= select_tag 'search9', options_for_select(["1", "2", "3", "4","5", "6", "7", "8","9", "10","12","13","14"]),{:class => 'form form-control select' , :prompt => 'Numero de Habitaciones'}%>
+                               <%= select_tag 'search9', options_for_select(["1", "2", "3", "4","5", "6", "7", "8","9", "10","12","13","14"]),{:class => 'form form-control select' , :prompt => 'Number of rooms'}%>
                             </li>
                             <br>
 
                             <li>
-                               <%= text_field_tag :search,params[:search5], autocomplete: "off", :requerid => true, placeholder: "Buscar Por Ciudad", class: "form form-control"%>
+                               <%= text_field_tag :search,params[:search5], autocomplete: "off", :requerid => true, placeholder: "Search By City", class: "form form-control"%>
                             </li>
                             <br>
 
                             <li>
-                              <%= text_field_tag :search,params[:search6], autocomplete: "off", :requerid => true, placeholder: "Buscar Por Barrio", class: "form form-control"%>
+                              <%= text_field_tag :search,params[:search6], autocomplete: "off", :requerid => true, placeholder: "Search By Neighborhood", class: "form form-control"%>
                             </li>
                             <br>
-                            <strong><p>Habitaciones</p></strong>
+                            <strong><p>Rooms</p></strong>
 
                             <div class="col-md-3" style="padding-left: 0px;">
                               <%= check_box_tag "adsasd", id: "check1" %>
@@ -57,14 +57,14 @@
                             </div>
 
                             <li>
-                              <%= text_field_tag :search,params[:search6], autocomplete: "off", :requerid => true, placeholder: "Buscar Por Valor", class: "form form-control"%>
+                              <%= text_field_tag :search,params[:search6], autocomplete: "off", :requerid => true, placeholder: "Search By Value", class: "form form-control"%>
                             </li>
 
 
 
                             <div class="actions" style="margin-top: 20px">
                               <%= button_tag class: "btn btn-primary btn-block", :title => "Buscar Registros", id: "btn3" do %>
-                                <i class="fas fa-search" style=""></i>Aplicar Filtros
+                                <i class="fas fa-search" style=""></i> Apply Filters
                               <% end -%>
                             </div>
                           </ul>
@@ -78,13 +78,14 @@
             <div class="row mb-3">
                 <div class="col-md-12">
                   <% @properties.each do |property| %>
-                  <%=render 'property' , property: property  %>
+                    <%= render 'property' , property: property  %>
                     <br>
                   <% end -%>
                 </div>
-                                          <div class = "col-md-12 paginate text-center title-table1">
-    <%= will_paginate @properties, renderer: BootstrapPagination::Rails, previous_label: "Anterior", next_label: "Siguiente", inner_window: 1, outer_window: 0 %>
-  </div>
+                
+                <div class = "col-md-12 paginate text-center title-table1">
+                  <%= will_paginate @properties, renderer: BootstrapPagination::Rails, previous_label: "Anterior", next_label: "Siguiente", inner_window: 1, outer_window: 0 %>
+                </div>
             </div>           
         </div>
     </div>
