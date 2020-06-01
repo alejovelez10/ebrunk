@@ -1,14 +1,12 @@
-<div class="container">
+<div class="container mt-5">
   <div class="row">
-    <h2 align="center">Editar Cuenta</h2><br>
-
-
+  <br><br>
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
       <%= devise_error_messages! %>
    <div class="col-md-4 form1">
     <br>
       <div class="col-md-0">
-         <%= f.label "Nombre" %>
+         <%= f.label "Name" %>
           <div class="input-group">
             <span class="input-group-addon"><i class="fas fa-user" style = "color: #fff;" ></i></span>
            <%= f.text_field :name, autofocus: true, autocomplete: "email", class: "form form-control" %>
@@ -17,7 +15,7 @@
       <br>
 
       <div class="col-md-0">
-         <%= f.label "Apellido" %>
+         <%= f.label "Surname" %>
           <div class="input-group">
             <span class="input-group-addon"><i class="fas fa-user" style = "color: #fff;" ></i></span>
           <%= f.text_field :apellido, autofocus: true, class: "form form-control" %>
@@ -26,7 +24,7 @@
       <br>
 
       <div class="col-md-0">
-         <%= f.label "Edad" %>
+         <%= f.label "Age" %>
           <div class="input-group">
             <span class="input-group-addon"><i class="fas fa-user" style = "color: #fff;" ></i></span>
           <%= f.number_field :age, autofocus: true, class: "form form-control" %>
@@ -44,7 +42,7 @@
       <br>
 
       <div class="col-md-0">
-         <%= f.label "Pais" %>
+         <%= f.label "Country" %>
           <div class="input-group">
             <span class="input-group-addon"><i class="fas fa-user" style = "color: #fff;" ></i></span>
             <%= f.select :country_id,get_country.map { |u| [u.name, u.id] },{ include_blank: false },{ class: 'form form-control'  }%>
@@ -60,7 +58,7 @@
 
           <div class="form-group funkyradio-success">
             <%= f.check_box :video_call %>
-            <%= f.label "Opcion de Video llamada", for: "runner_video_call", style: "border: 1px solid #cccccc; width: 115%;" %><br />
+            <%= f.label "Video call option", for: "runner_video_call", style: "border: 1px solid #cccccc; width: 115%;" %><br />
           </div>
 
 
@@ -70,13 +68,13 @@
       <br>
 
       <div class="col-md-0">
-         <%= f.label "Imagen de Perfil" %>
+         <%= f.label "Profile picture" %>
          <%= f.file_field :image, autofocus: true %>
       </div>
       <br>
 
        <div class="field">
-        <%= f.label "Dirección de Residencia" %>
+        <%= f.label "Residence address" %>
           <div class="input-group">
             <span class="input-group-addon"><i class="fas fa-map-marker-alt" style = "color: #fff;" ></i></span>
         <%= f.text_field :address, autofocus: true, class: "form form-control"%>
@@ -88,7 +86,7 @@
   <div class="col-md-4 form2" >
 
       <div class="field">
-        <%= f.label "Ciudad de Residencia" %>
+        <%= f.label "City of residence" %>
           <div class="input-group">
             <span class="input-group-addon"><i class="fas fa-city" style = "color: #fff;" ></i></span>
               <%= f.text_field :city, autofocus: true, class: "form form-control" %>
@@ -97,7 +95,7 @@
       <br>
 
       <div class="field">
-        <%= f.label "Telefono Celular" %>
+        <%= f.label "Cell phone" %>
           <div class="input-group">
             <span class="input-group-addon"><i class="fas fa-mobile-alt" style = "color: #fff;" ></i></span>
         <%= f.text_field :mobile, autofocus: true, class: "form form-control" %>
@@ -106,7 +104,7 @@
       <br>
 
       <div class="field">
-        <%= f.label "Telefono De Residencia" %>
+        <%= f.label "Residence Phone" %>
           <div class="input-group">
             <span class="input-group-addon"><i class="fas fa-phone" style = "color: #fff;" ></i></span>
         <%= f.text_field :phone, autofocus: true, class: "form form-control" %>
@@ -115,16 +113,16 @@
       <br>
 
       <div class="field">
-        <%= f.label "Tipo de Indentificacion" %>
+        <%= f.label "ID Type" %>
           <div class="input-group">
             <span class="input-group-addon"><i class="fas fa-address-card" style = "color: #fff;" ></i></span>
-        <%= f.select 'type_of_identification', options_for_select(["Seleccione", "Cedula de Ciudadania ", "Cedula de Extrangeria ", "Pasaporte", "Id"  ]), {},{:class => 'form form-control'}%>
+        <%= f.select 'type_of_identification', options_for_select(["Select", "Citizenship card", "Foreigner ID", "Passport", "Id"  ]), {},{:class => 'form form-control'}%>
         </div>
       </div>
       <br>
 
       <div class="field">
-        <%= f.label "Numero de Documento" %>
+        <%= f.label "Document number" %>
           <div class="input-group">
             <span class="input-group-addon"><i class="fas fa-address-card" style = "color: #fff;" ></i></span>
         <%= f.text_field :number_document, autofocus: true, class: "form form-control" %>
@@ -139,7 +137,7 @@
       <% end %>
 
       <div class="field">
-        <%= f.label "Contraseña" %> <i>(leave blank if you don't want to change it)</i>
+        <%= f.label "Password" %> <i>(leave blank if you don't want to change it)</i>
           <div class="input-group">
             <span class="input-group-addon"><i class="fas fa-key" style = "color: #fff;" ></i></span>
         <%= f.password_field :password, autocomplete: "new-password", class: "form form-control" %>
@@ -157,7 +155,7 @@
       <br>
 
       <div class="field">
-        <%= f.label "Contraseña Actual" %> <i>(Necesitas Poner Tu contraseña actual para guardar los cambios )</i>
+        <%= f.label "Current password" %> <i>(You need to put your current password to save the changes)</i>
           <div class="input-group">
             <span class="input-group-addon"><i class="fas fa-key" style = "color: #fff;" ></i></span>
         <%= f.password_field :current_password, autocomplete: "current-password", class: "form form-control" %>
@@ -166,8 +164,8 @@
       <br>
 
       <div class="actions">
-        <%= f.submit "Guardar", class: "btn btn-primary" %>
-        <%= link_to "Volver",runner_home_path, class: "btn btn-default" %>
+        <%= f.submit "Save", class: "btn btn-primary" %>
+        <%= link_to "Return",runner_home_path, class: "btn btn-default" %>
       </div>
 
     <% end %>

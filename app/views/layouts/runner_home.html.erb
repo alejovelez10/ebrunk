@@ -187,24 +187,24 @@
                     </li>
                     <li>
                         <%= link_to  new_property_path do %>
-                            <i class="fas fa-building" id="icon_menu"></i><b> Nueva Propiedad</b>
+                            <i class="fas fa-building" id="icon_menu"></i><b> New Property</b>
                         <% end -%>
                     </li>
 
                     <li class="active">
                         <%= link_to  runner_home_path do %>
-                            <i class="fas fa-home" id="icon_menu"></i><b> Mis Propiedades</b>
+                            <i class="fas fa-home" id="icon_menu"></i><b> My Properties</b>
                         <% end -%>
                     </li>
 
                     <li>
                         <%= link_to  pagina_show_path do %>
-                            <i class="fas fa-exchange-alt" id="icon_menu"></i><b> Propiedades para Intercambio</b>
+                            <i class="fas fa-exchange-alt" id="icon_menu"></i><b> Exchange Properties</b>
                         <% end -%>
                     </li>
                      <li>
                         <%= link_to  index_contacs_path do %>
-                            <i class="fas fa-headset" id="icon_menu"></i><b>Solicitud Video llamada</b>
+                            <i class="fas fa-headset" id="icon_menu"></i><b> Video call request</b>
                         <% end -%>
                     </li>    
                  
@@ -212,25 +212,25 @@
                     
                     <li>
                         <%= link_to  my_brunks_path do %>
-                            <i class="fas fa-user" id="icon_menu"></i><b>Brunk Solicitados</b>
+                            <i class="fas fa-user" id="icon_menu"></i><b> Brunk Requested</b>
                         <% end -%>
                     </li>
 
                    
                        <li>
                         <%= link_to  brunks_required_path do %>
-                            <i class="fas fa-users" id="icon_menu"></i><b>Solicitudes de Brunk</b>
+                            <i class="fas fa-users" id="icon_menu"></i><b> Requests for Brunk</b>
                         <% end -%>
                     </li>
                     <li>
                         <%= link_to  edit_runner_registration_path do %>
-                            <i class="fas fa-pencil-alt" id="icon_menu"></i><b> Editar Cuenta</b>
+                            <i class="fas fa-pencil-alt" id="icon_menu"></i><b> Edit Account</b>
                         <% end -%>
                     </li>
 
                     <li>
                         <%= link_to  destroy_runner_session_path, method: :delete do %>
-                            <i class="fas fa-power-off" id="icon_menu" style="color: red;"></i><b> Salir</b>
+                            <i class="fas fa-power-off" id="icon_menu" style="color: red;"></i><b> go out</b>
                         <% end -%>
                     </li>
                     <div style="margin-bottom: 100px;"></div>
@@ -332,7 +332,7 @@
                             <i class="fas fa-home"></i>
                         </div>
                         <div class="content">
-                            <div class="text">PROPIEDADES</div>
+                            <div class="text">PROPERTIES</div>
                             <div class="number count-to" data-from="0" data-to="125" data-speed="15" data-fresh-interval="20"><%= get_properties_count %></div>
                         </div>
                     </div>
@@ -356,7 +356,7 @@
                             <i class="fas fa-exchange-alt"></i>
                         </div>
                         <div class="content">
-                            <div class="text">PARA INTERCAMBIO</div>
+                            <div class="text">FOR EXCHANGE</div>
                             <div class="number count-to" data-from="0" data-to="243" data-speed="1000" data-fresh-interval="20"><%= get_properties_true_count %></div>
                         </div>
                     </div>

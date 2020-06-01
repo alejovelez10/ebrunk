@@ -3,7 +3,7 @@
     <div class="col-md-12">
       <div class="row mb-3">
          <div class="col-md-10 col-md-offset-1">
-            <h1 align="center">Peticion de video llamada</h1><br>
+            <h1 align="center">Video call request</h1><br>
              <% @contact.each do |contacto| %>
                  <div class="card" style="padding: 20px;">
                     <div class="card-body">
@@ -11,7 +11,7 @@
                          <div class="row" style="margin-bottom: 10px;">
 
                           <div class="col-md-1">
-                            <b>Nombre</b><br>
+                            <b>Name</b><br>
                             <%= contacto.name%>
                           </div>
 
@@ -21,23 +21,23 @@
                           </div>
 
                           <div class="col-md-2 icon" style="padding-right: 0px;">
-                            <b>Llamar <img src="http://icons.iconarchive.com/icons/martz90/circle-addon2/512/google-hangouts-icon.png"></b><br>
+                            <b>Call <img src="http://icons.iconarchive.com/icons/martz90/circle-addon2/512/google-hangouts-icon.png"></b><br>
                              <%= get_state_call(contacto.state_call) %>
                           </div>
 
                           <div class="col-md-3" style="padding-left: 0px;">
-                            <b>Fecha</b><br>
+                            <b>Date</b><br>
                             <%= get_date_hora(contacto.datetime_call) %>
                           </div>
                         </div>
                           <div class="col-md-10" style="padding: 0px;">
-                            <b>Mensage</b><br>
+                            <b>Message</b><br>
                             <%= contacto.message%>
                           </div>
 
                           <div class="col-md-4" style="padding: 0px; float: right;">
-                            <%= link_to "Programar Call", crear_call_path(contacto.id), remote: true , class: "btn btn-primary" if contacto.state_call%>
-                            <%= link_to "Llamar", contacto.url_call, class: "btn btn-success" if contacto.url_call%>
+                            <%= link_to "Program Call", crear_call_path(contacto.id), remote: true , class: "btn btn-primary" if contacto.state_call%>
+                            <%= link_to "Call", contacto.url_call, class: "btn btn-success" if contacto.url_call%>
                           </div>
 
                         </div>

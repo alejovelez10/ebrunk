@@ -4,7 +4,7 @@
       <div class="row mb-3">
          <div class="col-md-10 col-md-offset-1">
           <% if @properties.any? %>
-            <h1 align="center">Mis publicaciones</h1><br>
+            <h1 align="center"> My Properties</h1><br>
             <% @properties.each do |property| %>
              <%=render 'property' , property: property  %>
           
@@ -21,8 +21,8 @@
     <br>
     <div class="jumbotron jumbotron-fluid" id="jumbo">
       <div class="container">
-        <h3 class="display-4" align="center">No Tienes Propiedades Creadas</h3><br>
-        <p align="center"><%= link_to "Crear Nueva Propiedad", new_property_path, class: "btn2"%></p>
+        <h3 class="display-4" align="center">You have no created properties</h3><br>
+        <p align="center"><%= link_to "Create New Property", new_property_path, class: "btn2"%></p>
       </div>
     </div>
 

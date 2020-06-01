@@ -1,5 +1,5 @@
 <!-- Page Container -->
-<div class="container">
+<div class="container mt-5">
 <div class="w3-container w3-content" style="max-width:1400px;margin-top:10px; margin-left: 100px;">    
   <!-- The Grid -->
   <div class="w3-row">
@@ -22,7 +22,7 @@
     </div>
     
     <!-- Middle Column -->
-    <div class="w3-col m7">
+    <div class="w3-col m7 mt-5">
       <div class="w3-container w3-card w3-white w3-round w3-margin" style="margin-top: 0px !important;     border-top: 2px solid #dfe5e8;"><br>
         <div class="col-md-8" style="padding: 0px;">
           <h2><%= @property.property_type %> en Venta </h2> 
@@ -33,9 +33,9 @@
           <thead">
             <tr>
               <th><i class="fas fa-chart-area" style="color: #0e67c3;"></i> <%= @property.area %> m²</th>
-              <th><i class="fas fa-bed" style="color: #0e67c3;"></i> Habitaciones: <%= @property.number_bedrooms %></th>
-              <th><i class="fas fa-bath" style="color: #0e67c3;"></i> Baños: <%= @property.number_bathrooms %> </th>
-              <th style="padding: 1px; padding-left: 5px;"><i class="fas fa-car-side" style="color: #0e67c3;"></i> Parqueaderos: <%= @property.parking_lot %></th>
+              <th><i class="fas fa-bed" style="color: #0e67c3;"></i> Rooms: <%= @property.number_bedrooms %></th>
+              <th><i class="fas fa-bath" style="color: #0e67c3;"></i> Bathrooms: <%= @property.number_bathrooms %> </th>
+              <th style="padding: 1px; padding-left: 5px;"><i class="fas fa-car-side" style="color: #0e67c3;"></i> Parking lot: <%= @property.parking_lot %></th>
             </tr>
           </thead>
         </table>
@@ -46,7 +46,7 @@
                 <div class="tab" role="tabpanel">
                         <!-- Nav tabs -->
                         <ul class="nav nav-tabs" role="tablist">
-                            <li role="presentation" class="active"><a href="#Section1" aria-controls="home" role="tab" data-toggle="tab">Imagenes</a></li>
+                            <li role="presentation" class="active"><a href="#Section1" aria-controls="home" role="tab" data-toggle="tab">Images</a></li>
                             <li role="presentation"><a href="#Section2" aria-controls="profile" role="tab" data-toggle="tab">Videos</a></li>
                         </ul>
 
@@ -100,7 +100,7 @@
       </div>
       
       <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-        <span class="w3-left w3-opacity">Descripcion</span>
+        <span class="w3-left w3-opacity">Description</span>
         <hr class="w3-clear">
 
         <div class="col-md-4" style="padding: 0px;">
@@ -113,7 +113,7 @@
 
         <div class="col-md-4">
           <ul class="list-group text-center">
-            <li class="list-group-item">Estrato:<br>
+            <li class="list-group-item">Stratum:<br>
               <b><%= @property.stratum %></b>
             </li>
           </ul>
@@ -121,7 +121,7 @@
 
         <div class="col-md-4">
           <ul class="list-group text-center">
-            <li class="list-group-item">Ciudad:<br>
+            <li class="list-group-item">City:<br>
                <b><%= @property.city %></b>
             </li>
           </ul>
@@ -130,7 +130,7 @@
       </div>
 
       <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-        <span class="w3-left w3-opacity">Ubicacion del Inmueble</span>
+        <span class="w3-left w3-opacity">Property location</span>
         <hr class="w3-clear">
         <div class="col-md-12" style="padding: 0px;">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63460.01223186089!2d-75.58571159203002!3d6.230635615154693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa042651907d7e2a7!2sCaf%C3%A9+Literario+el+Taller!5e0!3m2!1ses-419!2sco!4v1539807186561" width="530" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
@@ -142,32 +142,32 @@
     </div>
     
     <!-- Right Column -->
-    <div class="w3-col m2">
+    <div class="w3-col m2 mt-5">
       <div class="w3-card w3-round w3-white w3-center" id="form-send">
         <div class="w3-container" style="padding: 0px; ">
-          <h2>Contactar Runner</h2><br>
+          <h2>Contact Runner</h2><br>
 
          <%= form_tag new_contact_path , remote: true,method: :post do %>
 
             <%= label_tag :Nombre %>
-            <%= text_field_tag :name,nil, class: "form form-control", :placeholder => "Nombre"%>
+            <%= text_field_tag :name,nil, class: "form form-control", :placeholder => "Name"%>
             <br>
 
             <%= label_tag :Email %>
-            <%= email_field_tag :email,nil, class: "form form-control", :placeholder => "Nombre"%>
+            <%= email_field_tag :email,nil, class: "form form-control", :placeholder => "Email"%>
             <br>
 
-            <%= label_tag "Mensaje" %>
-            <%= text_area_tag :message,nil, class: "form form-control", :placeholder => "Mensaje" ,:rows => 3,  :cols =>25 %>
+            <%= label_tag "Message" %>
+            <%= text_area_tag :message,nil, class: "form form-control", :placeholder => "Message" ,:rows => 3,  :cols =>25 %>
             <br>
-            <p>Solicitud de Video llamada</p>
+            <p>Video call request</p>
             
             <div class="col-md-12"  style="margin-left: 12px;">
               <div class="row funkyradio">
                     <div class="col-md-6" style="padding-left: 0px;">
                       <div class="form-group funkyradio-success">
                         <%= radio_button_tag :state_call, true,nil, class: "rv" %>
-                        <label for="state_call_true">Si</label>
+                        <label for="state_call_true">Yes</label>
                       </div>
                     </div>
 
@@ -188,7 +188,7 @@
                 <br>
             </div>
 
-            <%= submit_tag "Enviar", class: "btn btn-primary btn-block"  %>
+            <%= submit_tag "Send", class: "btn btn-primary btn-block"  %>
 
           <% end -%>
         </div>

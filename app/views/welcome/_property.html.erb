@@ -12,13 +12,13 @@
 
                                <div class="col-md-12">
                                 <p style="margin-left: 5px;margin-bottom: 10px;" > <strong><%= property.property_type%> - <%= property.city%> - <%=property.country.name if property.country%></strong>
-                                   <%= link_to 'Brunk', step1_path(property.id), class: "btn2", style: "float:right;margin-left:10px;" if action_name == "pagina_show"%>
-                                <%= link_to 'Ver Propiedad', property, class: "btn2", style: "float:right"%>
+                                  <%= link_to 'Brunk', step1_path(property.id), class: "btn2", style: "float:right;margin-left:10px;" if action_name == "pagina_show"%>
+                                  <%= link_to 'View Property', property, class: "btn2", style: "float:right"%>
 
                                 </p>
-                                <small > <strong> Area: </strong><%= property.area%>,00 m2</small>
-                              <small><strong> Habitaciones: </strong><%= property.number_bedrooms%> hab</small>
-                              <small><strong> Estrato: </strong> <%= property.stratum%></small>
+                                <small><strong> Area: </strong><%= property.area%>,00 m2</small>
+                                <small><strong> Rooms: </strong><%= property.number_bedrooms%> hab</small>
+                                <small><strong> Stratum: </strong> <%= property.stratum%></small>
                               </div>
                             
 
@@ -33,18 +33,18 @@
                         <i class="fas fa-pencil-alt" style = "font-size:20px;margin-right: 10px" aria-hidden="true"></i>
                     <% end -%>
                                   <%= link_to  property, method: :delete, data: {
-                                       confirm: '¿Estas Seguro?',
-                                       'confirm-button-text': 'Borrar',
-                                       'cancel-button-text': 'Cancelar',
+                                       confirm: '¿Are you sure?',
+                                       'confirm-button-text': 'Delete',
+                                       'cancel-button-text': 'Cancel',
                                        'confirm-button-color': '#CC0000',
-                                        text: 'Recuerda que el registro se borrara permanentemente',
+                                        text: 'Remember that the record will be permanently deleted',
                                        'image-url': ''} do%>
                                     <i class="fas fa-trash-alt" style = "font-size:20px;" aria-hidden="true"></i>
                                 <% end -%>  
                                 </div>
                                        <div class="col-md-8" style="    padding-right: 27px; font-size: 20px;text-align: right;">
                                    
-                                        <small><b>Precio: </b><%= number_to_currency(property.price, precision: 0) %></small>
+                                        <small><b>Price: </b><%= number_to_currency(property.price, precision: 0) %></small>
                                       </div>
                                   
                             </div>
