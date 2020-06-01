@@ -8,9 +8,9 @@
 
       <div class="col-md-9 info">
         <div class="col-md-12">
-          <b>Nombre: </b><%= runner.name%><br><br>
+          <b>Name: </b><%= runner.name%><br><br>
           <b>Email: </b><%= runner.email %><br><br>
-          <b>Numero de Propiedade: </b><%= Property.where(runner_id: runner.id).count %>  
+          <b>Number of properties: </b><%= Property.where(runner_id: runner.id).count %>  
 
           <div class="col-md-3" style="float: right; padding: 0px;">
             <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></p>
