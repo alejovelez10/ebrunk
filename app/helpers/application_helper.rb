@@ -24,13 +24,13 @@ module ApplicationHelper
 		  if collection.total_pages < 2
 		    case collection.size
 		    when 0; "No hay #{entry_name.pluralize} registradas"
-		    else; %{Mostrando %d de %d #{entry_name.pluralize}} % [
+		    else; %{Showing %d de %d #{entry_name.pluralize}} % [
 		      collection.length ,
 		      collection.total_entries
 		    ]
 		    end
 		  else
-		    %{Mostrando %d de %d #{entry_name.pluralize}} % [
+		    %{Showing %d de %d #{entry_name.pluralize}} % [
 		      collection.length ,
 		      collection.total_entries
 		    ]
@@ -43,13 +43,13 @@ module ApplicationHelper
 		  if collection.total_pages < 2
 		    case collection.size
 		    when 0; "No hay #{entry_name.pluralize} registrados"
-		    else; %{Mostrando %d de %d #{entry_name.pluralize}} % [
+		    else; %{Showing %d de %d #{entry_name.pluralize}} % [
 		      collection.length ,
 		      collection.total_entries
 		    ]
 		    end
 		  else
-		    %{Mostrando %d de %d #{entry_name.pluralize}} % [
+		    %{Showing %d de %d #{entry_name.pluralize}} % [
 		      collection.length ,
 		      collection.total_entries
 		    ]

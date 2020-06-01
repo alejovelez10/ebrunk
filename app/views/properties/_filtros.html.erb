@@ -1,35 +1,35 @@
 <div class="container-fluid" id="filtros">
 
-  <h4><%= @properties.count %> Anuncios de Propiedades en Venta <br></h4> <i><%= page_entries_info @properties %></i><br><br>
+  <h4><%= @properties.count %> Property Listings For Sale <br></h4> <i><%= page_entries_info @properties %></i><br><br>
 
         <%= form_tag properties_path, :method => 'get' do%>
 
         <div class="col-md-2" style="float: right; padding: 0px; width: 99px;">
-          <%= link_to properties_path, :title => "Cancelar Filtros", class: "btn btn-danger", id: "btn3" do%>
+          <%= link_to properties_path, :title => "Cancel Filters", class: "btn btn-danger", id: "btn3" do%>
             <i class="fas fa-ban"></i>
           <% end -%> 
 
-          <%= button_tag class: "btn btn-primary sh3", :title => "Buscar Registros", id: "btn3" do %>
+          <%= button_tag class: "btn btn-primary sh3", :title => "Search registers", id: "btn3" do %>
           <i class="fas fa-search" style=""></i>
           <% end -%>
 
         </div>
 
         <div class="col-md-3" style="padding-left: 2px; padding-right: 2px;">
-          <%= select_tag 'search2', options_for_select(get_country.collect{ |u| ["#{u.name}", u.id, ] }),{:class => "form-control sh4", include_blank: true, :prompt => 'Seleciona Un Pais' }%>
+          <%= select_tag 'search2', options_for_select(get_country.collect{ |u| ["#{u.name}", u.id, ] }),{:class => "form-control sh4", include_blank: true, :prompt => 'Select a country' }%>
         </div>
 
         <div class="col-md-3" style=" padding-right: 2px; padding-left: 2px;">
-          <%= select_tag 'search3', options_for_select(["Apartamento", "Casa", "Finca", "Parqueadero","Oficina", "Local", "Bodega", "Lote","Habitacion", "Consultorio", "Edificio", "Cabaña","Casa Campestre", "Aparta Estudio", "Casa Lote"]),{:class => 'form form-control select' , :prompt => 'Tipo de Inmueble'}%>
+          <%= select_tag 'search3', options_for_select(["Apartment", "House", "Farm", "Parking","Office", "Local", "Cellar", "Lot","Room", "Consulting room", "Building","Country House", "Study Apart", "Lot House"]),{:class => 'form form-control select' , :prompt => 'Property type'}%>
         </div>
 
         <div class="col-md-3" style=" padding-right: 2px;  padding-left: 2px;">
-          <%= text_field_tag :search,params[:search], autocomplete: "off", :requerid => true, placeholder: "Buscar Por Ciudad", class: "form form-control"%>
+          <%= text_field_tag :search,params[:search], autocomplete: "off", :requerid => true, placeholder: "Search By City", class: "form form-control"%>
         </div>
 
         <div class="col-md-1" style=" padding-right: 2px; padding-left: 2px;">
 
-        <%= select_tag 'search4', options_for_select(["1", "2", "3", "4","5", "6", "Campestre"]),{:class => 'form form-control select' , :prompt => 'Tipo de Estrato', style: "width: 181px !important;"}%>
+        <%= select_tag 'search4', options_for_select(["1", "2", "3", "4","5", "6", "Country"]),{:class => 'form form-control select' , :prompt => 'Stratum Type', style: "width: 181px !important;"}%>
 
         </div>
 
