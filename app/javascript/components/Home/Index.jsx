@@ -1,6 +1,17 @@
 import React, { Component } from 'react';
+import AOS from 'aos';
 
 class Index extends Component {
+    constructor(props){
+        super(props)
+    }
+
+    componentDidMount(){
+        AOS.init({
+            duration : 2000
+        })
+    }
+
     render() {
         return (
             <React.Fragment>
@@ -144,12 +155,6 @@ class Index extends Component {
                                         </div>
 
                                         <div className="col-lg-6 order-1 order-lg-2 mt-3 mt-lg-0">
-                                            <h3 className="mb-3">SMART AGREEMENTS</h3>
-                                            <hr/>
-                                            <p className="font-italic mb-4">
-                                                Runners are those participants in the company who have the possibility of earning money through RUN (sales) made by assemblies made on the platform.
-                                            </p >
-
                                             <h3 className="mb-3">BLOCKCHAIN</h3>
                                             <hr/>
                                             <p>
@@ -158,6 +163,33 @@ class Index extends Component {
                                             </p>
                                         </div>
 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="features" className="features pb-0">
+                        <div className="container" data-aos="fade-up">
+                            <div className="tab-content">
+
+                                <div className="tab-pane active show" id="tab-1">
+                                    <div className="row">
+                                        <div className="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                                            <h3 className="mb-3">SMART CONTRACTS</h3>
+                                            <hr/>
+                                            <p className="font-italic">
+                                            The Blockchain Technology That Will Replace Lawyers. TLDR: A smart contract is a computer protocol intended to digitally facilitate, verify, or enforce the negotiation or performance of a contract. Smart contracts allow the performance of credible transactions without third parties.
+                                            </p>
+                                        </div>
+                                        <div className="col-lg-6 order-1 order-lg-2 text-center">
+                                            <img 
+                                                src="https://trello-attachments.s3.amazonaws.com/5ed1bddd6e1f10827a37d66d/968x645/8493f1dc70ddecb8d47dadd78dad7c80/Digital-Fingerprint.jpg" 
+                                                alt="" 
+                                                className="img-fluid"
+                                                style={{height: '282px'}}
+                                            />
+                                        </div>
                                     </div>
                                 </div>
                             </div>

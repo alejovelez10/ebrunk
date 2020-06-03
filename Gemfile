@@ -39,6 +39,7 @@ gem "mini_magick"
 gem "nested_form", :git => 'https://github.com/ryanb/nested_form.git'
 gem 'toastr_rails'
 gem 'bootstrap', '~> 4.3.1'
+gem 'active_model_serializers', '~> 0.10.0'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 gem 'fog', '~> 1.38'

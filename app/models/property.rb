@@ -29,6 +29,7 @@
 #  parking_lot      :integer
 #  brunk            :boolean
 #  brunk_type       :string
+#  price            :long
 #
 
 class Property < ApplicationRecord

@@ -1,46 +1,49 @@
 class PropertiesController < ApplicationController
   before_action :set_property, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_runner!, :except => [:index, :show]
-  # GET /properties
-  # GET /properties.json
+  before_action :authenticate_runner!, :except => [:index, :show, :get_properties]
   layout 'runner_home', :only => [:new, :edit]
+
   def index
     if params[:search] || params[:search2] || params[:search3] || params[:search4] || params[:search5] || params[:search6]
-    @properties = Property.all.search(params[:search],params[:search2], params[:search3],params[:search4],params[:search5],params[:search6]).paginate(:page => params[:page], :per_page => 4)
-
+      @properties = Property.all.search(params[:search],params[:search2], params[:search3],params[:search4],params[:search5],params[:search6]).paginate(:page => params[:page], :per_page => 4)
     else
-    @properties = Property.all.paginate(:page => params[:page], :per_page => 4)
+      @properties = Property.all.paginate(:page => params[:page], :per_page => 4)
     end
 
+    #@country = Country.all
     render :layout => "runners"
   end
 
-  # GET /properties/1
-  # GET /properties/1.json
+  def get_properties
+    if params[:search] || params[:search2] || params[:search3] || params[:search4] || params[:search5] || params[:search6]
+      properties = Property.all.search(params[:search],params[:search2], params[:search3],params[:search4],params[:search5],params[:search6]).paginate(:page => params[:page], :per_page => 4)
+    else
+      properties = Property.all.paginate(:page => params[:page], :per_page => 4)
+    end
+
+    render :json => {
+      data: ActiveModelSerializers::SerializableResource.new(properties, each_serializer: PropertySerializer)
+    }
+  end
+
   def show
     render :layout => "runners"
   end
 
-  # GET /properties/new
+
   def new
     @property = Property.new
   end
 
   def cambios
-      
-      @property = Property.find(params[:id])
-  
-      @property.update(state_favorite: !@property.state_favorite)
-      puts @property.state_favorite
-
+    @property = Property.find(params[:id])
+    @property.update(state_favorite: !@property.state_favorite)
   end
 
-  # GET /properties/1/edit
   def edit
+
   end
 
-  # POST /properties
-  # POST /properties.json
   def create
     @property = Property.new(property_params)
 

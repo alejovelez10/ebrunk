@@ -32,50 +32,7 @@
 #  price            :long
 #
 
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
-  type_of_offer: MyString
-  property_type: MyString
-  runner_id: 1
-  country_id: 1
-  department: MyString
-  city: MyString
-  address: MyString
-  latitude: 1
-  length: 1
-  prince: 1
-  stratum: 1
-  area: 1
-  blueprints: MyString
-  number_bedrooms: 1
-  number_bathrooms: 1
-  levels: 1
-  state: MyString
-  state_favorite: false
-  url_video: MyString
-  images: MyString
-  title: MyString
-
-two:
-  type_of_offer: MyString
-  property_type: MyString
-  runner_id: 1
-  country_id: 1
-  department: MyString
-  city: MyString
-  address: MyString
-  latitude: 1
-  length: 1
-  prince: 1
-  stratum: 1
-  area: 1
-  blueprints: MyString
-  number_bedrooms: 1
-  number_bathrooms: 1
-  levels: 1
-  state: MyString
-  state_favorite: false
-  url_video: MyString
-  images: MyString
-  title: MyString
+class PropertySerializer < ActiveModel::Serializer
+  attributes :id, :area, :number_bedrooms, :stratum, :property_type, :city, :price, :images
+  belongs_to :country, serializer: CountrySerializer
+end
