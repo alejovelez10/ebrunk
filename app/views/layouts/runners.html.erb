@@ -75,8 +75,7 @@
       </nav>
 
       <% if runner_signed_in? %>
-        <%= link_to 'Edit profile', edit_runner_registration_path, :class => 'get-started-btn scrollto', data: {turbolinks: false} %>
-        <%= link_to "Leave", destroy_runner_session_path, method: :delete, :class => 'get-started-btn scrollto', data: {turbolinks: false}   %>
+        <%= link_to "Log Out", destroy_runner_session_path, method: :delete, :class => 'get-started-btn scrollto', data: {turbolinks: false}   %>
       <% else %>
         <%= link_to "Login", new_runner_session_path, :class => 'get-started-btn scrollto'  %>
       <% end -%>
