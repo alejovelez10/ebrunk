@@ -311,13 +311,13 @@ class Index extends Component {
                                 <div className="footer-info">
                                 <h3>Ebrunk</h3>
                                     <div className="social-links mt-3">
-                                        <a href="#" className="twitter">
+                                        <a href="https://twitter.com/Brunk14Brunk" target="_blank" className="twitter">
                                             <i className="fab fa-twitter"></i>
                                         </a>
-                                        <a href="#" className="facebook">
+                                        <a href="https://www.facebook.com/BRUNK-112125030465889/" target="_blank" className="facebook">
                                             <i className="fab fa-facebook-f"></i>
                                         </a>
-                                        <a href="#" className="instagram">
+                                        <a href="https://www.instagram.com/brunk14/" target="_blank" className="instagram">
                                             <i className="fab fa-instagram"></i>
                                         </a>
                                     </div>
