@@ -15,6 +15,7 @@
 //= require jquery
 //= require toastr_rails
 //= require jquery_ujs
+//= require popper
 //= require bootstrap-sprockets
 //= require bootstrap.min
 //= require sweetalert2
